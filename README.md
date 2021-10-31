@@ -5,7 +5,7 @@ Convert xlsx files to csv with UTF-8 encoding and allows only hebrew and english
 ## Installation
 **place xlsx files in Excel folder.**
 ###via binary
-* run converter.exe
+* run **converter.exe** or **converter_silent.exe** (if you want to close the console right after conversion )
 
 ###via python
 Install all the required packages from the requirements.txt
