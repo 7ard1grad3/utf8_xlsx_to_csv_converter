@@ -5,7 +5,7 @@ from pathlib import Path
 
 from rich.console import Console
 
-from config import EXCEL_FOLDER
+from config import EXCEL_FOLDER, WAIT_FOR_EXIT
 from lib.logic import Logic
 
 if __name__ == '__main__':
@@ -32,3 +32,7 @@ if __name__ == '__main__':
         console.print('✅ All files completed')
     except FileNotFoundError:
         console.print("No files found in excel folder")
+
+    if WAIT_FOR_EXIT:
+        input("Press enter to close")
+
