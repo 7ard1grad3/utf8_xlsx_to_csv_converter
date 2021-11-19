@@ -57,9 +57,11 @@ class Logic:
 
     @staticmethod
     def clean(text: str) -> str:
+        with open('allowed_chars.txt', encoding="utf-8") as f:
+            regex_filter = f.readline()
         if str(text) == 'nan':
             text = ''
-        return re.sub(REGEX_FILTER, '', str(text)).strip()
+        return re.sub(regex_filter, '', str(text)).strip()
 
     def create_result_file(self, file: str):
         try:
